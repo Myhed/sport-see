@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+main {
+    display: grid;
+    grid-template-areas:
+        'sidebar header header'
+        'sidebar container container'
+        'sidebar container container';
+    grid-template-columns: 120px 1fr 200px;
+    grid-template-rows: 100px 1fr;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+header {
+    grid-area: header;
+    background: black;
+    padding: 20px;
+}
+
+.profile-container {
+    grid-area: container;
+}

@@ -1,0 +1,114 @@
+.profile-container {
+    display: grid;
+    grid-template-areas:
+        'title title title'
+        'graph graph details'
+        'graph graph details';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+}
+
+.title {
+    grid-area: title;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.title h1 span:nth-child(2) {
+    color: red;
+}
+
+.title h1 {
+    font-size: 48px;
+}
+
+.title p {
+    font-size: 18px;
+}
+
+.graph {
+    grid-area: graph;
+    padding: 30px;
+    display: grid;
+    grid-template-areas:
+        'graph1 graph1 graph1'
+        'graph2 graph2 grahp2';
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+.graph1 {
+    grid-area: graph1;
+    background: #fbfbfb;
+    width: 100%;
+}
+
+.graph2 {
+    grid-area: graph2;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.graph-secondary {
+    width: 30%;
+}
+.details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 30px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.content h3 {
+    line-height: 30px;
+}
+
+.content p {
+    font-size: 14px;
+}
+
+.detail {
+    background: #fbfbfb;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+}
+
+@media screen and (max-width: 1400px) {
+    .graph {
+        grid-template-areas:
+            'graph1'
+            'graph2';
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .profile-container {
+        grid-template-areas:
+            'title title title'
+            'details details details'
+            'graph graph graph';
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto 1fr;
+    }
+    .details {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .details {
+        flex-direction: column;
+    }
+}
